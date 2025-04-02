@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjeevan Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vibur&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .vibur {
+            font-family: 'Vibur', cursive;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-900 text-gray-300 p-4 shadow-lg border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-blue-400">Sanjeevan</h1>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#header" class="hover:text-blue-400 font-semibold transition-colors">Home</a>
+                <a href="#about" class="hover:text-blue-400 font-semibold transition-colors">About</a>
+                <a href="#projects" class="hover:text-blue-400 font-semibold transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-blue-400 font-semibold transition-colors">Contact</a>
+            </div>
+            <a href="Images/MYCV.pdf" download class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+    Download CV
+</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden focus:outline-none text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-gray-800 text-gray-300 py-2">
+            <a href="#header" class="py-2 w-full text-center hover:bg-gray-700">Home</a>
+            <a href="#about" class="py-2 w-full text-center hover:bg-gray-700">About</a>
+            <a href="#projects" class="py-2 w-full text-center hover:bg-gray-700">Projects</a>
+            <a href="#contact" class="py-2 w-full text-center hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <div id="header" class="min-h-screen flex flex-col justify-center items-center px-6 md:px-16 lg:px-24 bg-gray-900">
+        <!-- Text Content -->
+        <div class="flex flex-col justify-center items-center text-center space-y-6 fade-in">
+            <!-- H1 with adjusted margin/padding -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-gray-100 vibur mb-4">
+                Hello, <span class="text-blue-400">I'm Sanjeevan</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-3xl text-gray-400">
+                I'm a <span id="dynamic-text" class="text-blue-400 font-semibold">Front End Developer</span>
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex space-x-6 mt-4">
+                <a href="https://www.linkedin.com/in/ssanjeevan201/" target="_blank" class="text-blue-400 hover:text-blue-300 transition duration-300">
+                    <i class="fab fa-linkedin text-2xl sm:text-3xl"></i>
+                </a>
+                <a href="https://github.com/sanjeevan200" target="_blank" class="text-blue-400 hover:text-blue-300 transition duration-300">
+                    <i class="fab fa-github text-2xl sm:text-3xl"></i>
+                </a>
+                <a href="https://www.instagram.com/sanjeevan.ss/" target="_blank" class="text-blue-400 hover:text-blue-300 transition duration-300">
+                    <i class="fab fa-instagram text-2xl sm:text-3xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- About Me, Education, and Experience Section -->
+<section id="about" class="py-12 md:py-16 px-4 bg-gray-900">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About Me Container -->
+            <div class="bento-item p-6 flex flex-col justify-between bg-gray-800 shadow-lg rounded-xl transition-transform transform hover:scale-105 hover:shadow-2xl border border-gray-700">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-4">About Me</h3>
+                    <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base">
+                        <li>Passionate Front-end Developer with expertise in HTML, CSS, and JavaScript, focused on building responsive and engaging web applications.</li></br>
+
+                        <li>Proficient in UI/UX design to create seamless and intuitive user experiences.</li></br>
+
+                        <li>Skilled in PHP for dynamic and interactive back-end development.</li>
+                    </ul>
+            </div>
+
+            <!-- Education Container -->
+            <div class="bento-item p-6 bg-gray-800 shadow-lg rounded-xl transition-transform transform hover:scale-105 hover:shadow-2xl border border-gray-700">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-4">Education</h3>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-gray-100 mb-2 font-bold text-sm md:text-base">Bachelor of Software Engineering Honors</p>
+                        <p class="text-gray-300 mb-2 text-sm md:text-base">The Open University of Sri Lanka</p>
+                        <p class="text-gray-400 text-xs md:text-sm">2022 - Present</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-100 mb-2 font-bold text-sm md:text-base">Diploma in Information Communication Technology</p>
+                        <p class="text-gray-300 mb-2 text-sm md:text-base">Miani Technical Institute</p>
+                        <p class="text-gray-400 text-xs md:text-sm">2018 - 2019</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience Container -->
+            <div class="bento-item p-6 bg-gray-800 shadow-lg rounded-xl transition-transform transform hover:scale-105 hover:shadow-2xl border border-gray-700">
+                <h3 class="text-xl md:text-2xl font-bold text-blue-400 mb-4">Work Experience</h3>
+                <div class="space-y-6">
+                    <div>
+                        <p class="text-gray-100 mb-2 font-bold text-sm md:text-base">UI/UX Designer Intern</p>
+                        <p class="text-gray-300 mb-2 text-sm md:text-base">Accron Revolutions Pvt Ltd</p>
+                        <p class="text-gray-400 text-xs md:text-sm">Jan 2024 - May 2024</p>
+                        <ul class="list-disc pl-5 text-gray-300 text-sm md:text-base">
+                            <li>Collaborated with the UI/UX team to improve user experience and interface design.</li></br>
+                            <li>Worked on five design projects, crafting visually appealing and user-friendly interfaces.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-12 md:py-16 px-4 bg-gray-900">
+    <div class="container mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-400 mb-6 md:mb-8 text-center">My Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Web Development Skills -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-blue-400 transition-colors">
+                <i class="fas fa-laptop-code text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Web Development</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-blue-400 mr-2"></i> HTML
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-blue-400 mr-2"></i> CSS
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-blue-400 mr-2"></i> JavaScript
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-blue-400 mr-2"></i> Bootstrap
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-blue-400 mr-2"></i> Tailwind CSS
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Mobile App Development Skills -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-green-400 transition-colors">
+                <i class="fas fa-mobile-alt text-5xl text-green-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Mobile App Development</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i> React Native
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Backend Development Skills -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-orange-400 transition-colors">
+                <i class="fas fa-server text-5xl text-orange-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Back-end Development</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-orange-400 mr-2"></i> C#
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-orange-400 mr-2"></i> Java
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-orange-400 mr-2"></i> PHP
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Database Skills -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-yellow-400 transition-colors">
+                <i class="fas fa-database text-5xl text-yellow-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Database Management</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i> MySQL
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-yellow-400 mr-2"></i> SQL Server
+                    </li>
+                </ul>
+            </div>
+
+            <!-- UI/UX Design -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-purple-400 transition-colors">
+                <i class="fas fa-pen-nib text-5xl text-purple-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">UI/UX Design</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-purple-400 mr-2"></i> Figma
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-purple-400 mr-2"></i> Adobe XD
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-purple-400 mr-2"></i> Adobe Photoshop
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-purple-400 mr-2"></i> Adobe Illustrator
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-purple-400 mr-2"></i> Canva
+                    </li>
+                </ul>
+            </div>
+
+            <!-- DevOps & Tools -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-left border border-gray-700 hover:border-red-400 transition-colors">
+                <i class="fas fa-tools text-5xl text-red-400 mb-4"></i>
+                <h3 class="text-xl font-semibold text-gray-100 mb-3">Tools</h3>
+                <ul class="text-gray-300 text-left space-y-2">
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-red-400 mr-2"></i> Git & GitHub
+                    </li>
+                    <li class="flex items-left">
+                        <i class="fas fa-check-circle text-red-400 mr-2"></i> VS Code
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="py-12 md:py-16 px-4 bg-gray-900">
+    <div class="container mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-400 mb-8 md:mb-12 text-center">My Certificates</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Certificate Box Template - Repeat for each certificate -->
+            
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in HTML Fundamentals</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2019</p>
+                <a href="https://www.sololearn.com/Certificate/CT-35UUAGUE/jpg"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate  <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                </button>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in CSS Fundamentals</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2019</p>
+                <a href="https://www.sololearn.com/Certificate/CT-YPUWSJSX/jpg"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in JavaScript</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2019</p>
+                <a href="https://www.sololearn.com/Certificate/CT-OPA9LTRS/png"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+    
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in jQuery</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2019</p>
+                <a href="https://www.sololearn.com/Certificate/CT-1NEYKFYP/jpg"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in SQL</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2019</p>
+                <a href="https://www.sololearn.com/Certificate/CT-WZCHJZMU/png"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in Java</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2021</p>
+               <a href="https://www.sololearn.com/Certificate/CT-ULKFUJGV/png"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in Responsive Web Design</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2021</p>
+                <a href="https://www.sololearn.com/Certificate/CT-GJSV7JOJ/jpg"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Certificate in Python Core</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2021</p>
+                <a href="https://www.sololearn.com/Certificate/CT-ZUZMXZEL/png"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl flex flex-col items-center border border-gray-700 hover:border-blue-400 transition-all duration-300 hover:scale-[1.02]">
+                <i class="fas fa-certificate text-5xl text-blue-400 mb-4"></i>
+                <h3 class="text-lg md:text-xl font-semibold text-gray-100 mb-2 text-center">Python for Beginners</h3>
+                <p class="text-gray-400 text-sm md:text-base text-center">Sololearn • 2022</p>
+               <a href="https://www.sololearn.com/Certificate/CT-UC5OCDT4/png"><button class="mt-4 text-blue-400 hover:text-blue-300 text-sm flex items-center">
+                    View Certificate <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-12 md:py-16 px-4 bg-gray-900">
+    <div class="container mx-auto text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-400 mb-6 md:mb-8">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Chiliz.png" alt="Chiliz Website" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Chiliz</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Readify.png" alt="TaskTracker App" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Readify</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/FoodFashion.jpg" alt="Food Fashion App" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Food Fashion</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Orderista.png" alt="Project 4" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Orderista</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Veggie.png" alt="Project 5" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Veggie</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Petties.png" alt="Project 6" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Petties</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/Eastern.png" alt="Project 6" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Eastern Spark</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="bento-item bg-gray-800 p-6 shadow-lg rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl border border-gray-700 hover:border-blue-400">
+                <img src="Images/sara.png" alt="Project 6" class="w-full h-50 object-cover rounded-lg mb-4 border border-gray-700">
+                <h3 class="text-xl font-bold text-gray-100 mb-2">Sara Paddy Store</h3>
+                <div class="flex flex-wrap justify-center gap-2 mb-3">
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">HTML</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">CSS</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">JavaScript</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">PHP</span>
+                    <span class="px-2 py-1 bg-gray-700 text-blue-400 text-xs rounded-md">MySQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-12 md:py-16 px-4 bg-gray-900">
+    <div class="container mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-blue-400 mb-8 md:mb-12 text-center">Contact Me</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <!-- Email Box -->
+            <div class="bento-item bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-blue-400 transition-colors text-center">
+                <div class="bg-gray-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-envelope text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100 mb-2">Email</h3>
+                <a href="mailto:ssjeevan201@gmai@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors break-all">
+                    ssjeevan201@gmail.com
+                </a>
+            </div>
+
+            <!-- Phone Box -->
+            <div class="bento-item bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-blue-400 transition-colors text-center">
+                <div class="bg-gray-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-phone-alt text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100 mb-2">Phone</h3>
+                <a href="tel:+94757448876" class="text-blue-400 hover:text-blue-300 transition-colors">
+                    (+94) 75 744 8876
+                </a>
+            </div>
+
+            <!-- Address Box -->
+            <div class="bento-item bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 hover:border-blue-400 transition-colors text-center">
+                <div class="bg-gray-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-marker-alt text-blue-400 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-100 mb-2">Location</h3>
+                <p class="text-gray-300">Batticaloa, Sri Lanka</p>
+            </div>
+        </div>
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mt-12">
+            <a href="https://www.linkedin.com/in/ssanjeevan201/" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/sanjeevan200" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="0757448876" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-gray-900 border-t border-gray-800 py-8 md:py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+
+            <!-- Copyright -->
+            <div class="text-gray-400 text-sm md:text-base mb-4 md:mb-0">
+                &copy; <span id="year"></span> Sanjeevan. All rights reserved.
+            </div>
+
+            <!-- Back to Top Button -->
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                    class="text-gray-400 hover:text-blue-400 transition-colors flex items-center">
+                Back to Top <i class="fas fa-arrow-up ml-2"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Auto-update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+    <script>
+        // Dynamic text animation
+        const dynamicText = document.getElementById('dynamic-text');
+        const words = ['Front End Developer','Mobile Developer'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            const currentChar = currentWord.substring(0, charIndex);
+            dynamicText.textContent = currentChar;
+
+            if (!isDeleting && charIndex < currentWord.length) {
+                // Typing
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else if (isDeleting && charIndex > 0) {
+                // Deleting
+                charIndex--;
+                setTimeout(typeEffect, 50);
+            } else {
+                // Change word
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+                setTimeout(typeEffect, 1000);
+            }
+        }
+
+        // Start the typing effect
+        typeEffect();
+    </script>
+</body>
+</html>
